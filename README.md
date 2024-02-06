@@ -2,7 +2,7 @@
   # README Generator
   
   ![License](https://img.shields.io/badge/License-MIT-blue.svg)
-
+  
   <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -16,9 +16,13 @@
   </ol>
   </details>
 
+  #### Click on image for a complete walkthrough!
+  
+  <a href="https://www.dropbox.com/scl/fi/tfu07cyceqo2qojbabpgn/Test-Video-Walthrough.mov?rlkey=ckfbq4nri1ysui9qbwzwakkv2&dl=0"><img src="./utils/README-generator.png" width="750px"></a>
+
   ## Description
   
-  This application was designed for users to dynamically create Markdown files for their projects. There is an initial template, but then after all user inputs have been received the README.md is filled in and built to the project's location.
+  This application was designed for users to dynamically create Markdown files for their projects. There is an initial template, but then after all user inputs have been received the README.md is filled in and built to the project's location. You can view a walkthrough example _[here](https://www.dropbox.com/scl/fi/tfu07cyceqo2qojbabpgn/Test-Video-Walthrough.mov?rlkey=ckfbq4nri1ysui9qbwzwakkv2&dl=0)_
   
   <p align="right">(<a href="#readme-generator" >Back to top</a>)</p>
 
