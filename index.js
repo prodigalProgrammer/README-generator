@@ -2,6 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
+const util = require("util");
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // array of questions for user
 const questions = [
@@ -43,15 +45,26 @@ const questions = [
   },
 ];
 
+// Adding the 'questions' array to a function that prompts user
+const promptUser = () => inquirer.prompt(questions);
+
 // function to write README file
 function writeToFile(fileName, data) {}
 
-// function to initialize program
-function init() {}
+// function to initialize program asyncronously
+async function init() {
+  console.log("Welcome to the Professional README Generator!");
+  try {
+    // Containing users' answers into a variable
+    const userAnswers = await promptUser();
+    const markdown = generateMarkdown(userAnswers);
+    const fileName = "README.md";
+    await writeFileAsync(fileName, markdown);
+    console.log("Successfully created README.md");
+  } catch (err) {
+    console.log(err);
+  }
+}
 
 // function call to initialize program
 init();
-inquirer.prompt(questions).then((data) => {
-  const fileName = `${data.title.toLowerCase().split(" ").join("")}.json`;
-  console.log(fileName);
-});
