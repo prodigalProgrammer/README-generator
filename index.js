@@ -1,5 +1,4 @@
 const fs = require("fs");
-const path = require("path");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 const util = require("util");
@@ -31,12 +30,12 @@ const questions = [
     type: "list",
     name: "license",
     message: "Please select the license for your project",
-    choices: ["Apache 2.0", "Boost Software", "MIT", "Mozilla Public"],
+    choices: ["Apache 2.0", "Boost 1.0", "MIT", "MPL 2.0"],
   },
   {
     type: "input",
     name: "github",
-    message: "What is the URL to your GitHub profile?",
+    message: "What is your GitHub username?",
   },
   {
     type: "input",
@@ -48,9 +47,6 @@ const questions = [
 // Adding the 'questions' array to a function that prompts user
 const promptUser = () => inquirer.prompt(questions);
 
-// function to write README file
-function writeToFile(fileName, data) {}
-
 // function to initialize program asyncronously
 async function init() {
   console.log("Welcome to the Professional README Generator!");
@@ -60,7 +56,9 @@ async function init() {
     const markdown = generateMarkdown(userAnswers);
     const fileName = "README.md";
     await writeFileAsync(fileName, markdown);
-    console.log("Successfully created README.md");
+    console.log(`Successfully created ${fileName}`);
+
+    // In case of error...
   } catch (err) {
     console.log(err);
   }
