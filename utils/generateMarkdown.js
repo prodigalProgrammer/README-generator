@@ -27,7 +27,7 @@ function generateMarkdown(data) {
   
   <p align="right">(<a href="#${data.title
     .toLowerCase()
-    .replace(" ", "-")}" >Back to top</a>)</p>
+    .replaceAll(" ", "-")}" >Back to top</a>)</p>
 
   ## Installation
     
@@ -35,7 +35,7 @@ function generateMarkdown(data) {
     
   <p align="right">(<a href="#${data.title
     .toLowerCase()
-    .replace(" ", "-")}" >Back to top</a>)</p>
+    .replaceAll(" ", "-")}" >Back to top</a>)</p>
 
   ## Usage
 
@@ -43,7 +43,7 @@ function generateMarkdown(data) {
 
   <p align="right">(<a href="#${data.title
     .toLowerCase()
-    .replace(" ", "-")}" >Back to top</a>)</p>
+    .replaceAll(" ", "-")}" >Back to top</a>)</p>
 
   ## License
 
@@ -53,7 +53,7 @@ function generateMarkdown(data) {
   
   <p align="right">(<a href="#${data.title
     .toLowerCase()
-    .replace(" ", "-")}" >Back to top</a>)</p>
+    .replaceAll(" ", "-")}" >Back to top</a>)</p>
 
   ## Contributing
 
@@ -61,7 +61,7 @@ function generateMarkdown(data) {
   
   <p align="right">(<a href="#${data.title
     .toLowerCase()
-    .replace(" ", "-")}" >Back to top</a>)</p>
+    .replaceAll(" ", "-")}" >Back to top</a>)</p>
 
   ## Tests
   
@@ -69,7 +69,7 @@ function generateMarkdown(data) {
 
   <p align="right">(<a href="#${data.title
     .toLowerCase()
-    .replace(" ", "-")}" >Back to top</a>)</p>
+    .replaceAll(" ", "-")}" >Back to top</a>)</p>
 
   ## Questions
 
@@ -83,7 +83,7 @@ function generateMarkdown(data) {
 
   <p align="right">(<a href="#${data.title
     .toLowerCase()
-    .replace(" ", "-")}" >Back to top</a>)</p>
+    .replaceAll(" ", "-")}" >Back to top</a>)</p>
 
 `;
 }
